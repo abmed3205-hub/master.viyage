@@ -11,9 +11,8 @@
             background-color: #0b0f19;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
             margin: 0;
+            padding: 0;
         }
         
         .app-container {
@@ -23,21 +22,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 30px;
+            min-height: 100vh;
         }
 
-        .banner-container {
+        .banner-box {
             width: 100%;
             background-color: #000;
         }
         
-        .banner-container img {
+        .banner-box img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        .action-container {
+        .button-box {
             width: 100%;
             padding: 16px;
             background-color: #0b0f19;
@@ -49,7 +48,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
             background-color: #00b4d8;
             color: #ffffff;
             text-decoration: none;
@@ -59,13 +57,12 @@
             font-size: 18px;
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
-            transition: all 0.2s ease;
             text-align: center;
+            transition: background 0.2s;
         }
 
         .whatsapp-btn:active {
             background-color: #0096b4;
-            transform: scale(0.98);
         }
     </style>
 </head>
@@ -73,14 +70,14 @@
 
     <div class="app-container">
         
-        <div class="banner-container">
+        <div class="banner-box">
             <img src="master-omra.jpg" alt="Master Voyages - عمرة رمضان المبارك">
         </div>
 
-        <div class="action-container">
+        <div class="button-box">
             <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A7%D8%AA%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86" 
                class="whatsapp-btn" target="_blank">
-                <span>احجز مقعدك الآن عبر واتساب</span>
+                احجز مقعدك الآن عبر واتساب
             </a>
         </div>
 
