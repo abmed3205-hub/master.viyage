@@ -7,17 +7,17 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
         
-        /* منع ظهور الفراغات السوداء نهائياً عند السحب في الهواتف */
+        /* القضاء التام على الفراغات والبقع السوداء ومنع السحب الفارغ */
         html, body {
-            background-color: #05070b;
+            background-color: #000000;
             margin: 0;
             padding: 0;
             width: 100%;
-            min-height: 100%;
+            min-height: 100vh;
             overscroll-behavior-y: none;
         }
 
-        /* شاشة البداية بالشعار لمدة نصف ثانية */
+        /* شاشة البداية بالشعار */
         #splash-screen {
             position: fixed;
             top: 0;
@@ -42,65 +42,30 @@
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
-            background-color: #05070b;
+            background-color: #000000;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
         }
 
-        .banner-box {
+        /* حاوية الصور لمنع أي فراغات فاصلة بينها تماماً */
+        .image-box {
             width: 100%;
-            background-color: #000;
             line-height: 0;
+            font-size: 0;
+            background-color: #000000;
         }
-        
-        .banner-box img {
+
+        .image-box img {
             width: 100%;
             height: auto;
             display: block;
+            border: none;
         }
 
-        /* حاوية زر الواتساب بعرض الشاشة بالكامل بدون أي فراغات */
-        .button-box {
-            width: 100%;
-            padding: 0;
-            background-color: #05070b;
-            line-height: 0;
-        }
-
-        /* زر أخضر واتسابي فاخر ومتدرج يتناسب 100% مع التصميم */
-        .whatsapp-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #25D366, #128c7e);
-            color: #ffffff;
-            text-decoration: none;
-            width: 100%;
-            padding: 18px;
-            border-radius: 0;
-            font-size: 19px;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            text-align: center;
-            transition: opacity 0.2s;
-        }
-
-        .whatsapp-btn:active {
-            opacity: 0.9;
-        }
-
-        .footer-image-box {
-            width: 100%;
-            background-color: #000;
-            line-height: 0;
-        }
-
-        .footer-image-box img {
-            width: 100%;
-            height: auto;
+        .image-box a {
             display: block;
+            width: 100%;
+            line-height: 0;
         }
     </style>
 </head>
@@ -114,20 +79,19 @@
     <div class="app-container">
         
         <!-- 1. الصورة الرئيسية للإعلان -->
-        <div class="banner-box">
+        <div class="image-box">
             <img src="master-omra.jpg" alt="Master Voyages - عمرة رمضان المبارك">
         </div>
 
-        <!-- 2. زر الواتساب باللون الأخضر الفاخر والمتناسق -->
-        <div class="button-box">
-            <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86%20%D8%B9%D8%A8%D8%B1%20Master%20Voyages" 
-               class="whatsapp-btn" target="_blank">
-                احجز رحلتك الإيمانية الآن 🌙
+        <!-- 2. زر الواتساب المصور الجديد -->
+        <div class="image-box">
+            <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86%20%D8%B9%D8%A8%D8%B1%20Master%20Voyages" target="_blank">
+                <img src="whatsapp-btn.jpg" alt="احجز مقعدك الآن عبر واتساب">
             </a>
         </div>
 
-        <!-- 3. صورة تفاصيل التواصل والموقع والمتاجر -->
-        <div class="footer-image-box">
+        <!-- 3. صورة تفاصيل التواصل والموقع والمتاجر في الأسفل مباشرة -->
+        <div class="image-box">
             <img src="omra-footer.jpg" alt="Master Voyages - معلومات التواصل والموقع">
         </div>
 
