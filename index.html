@@ -15,7 +15,7 @@
             padding: 0;
         }
 
-        /* شاشة البداية (Splash Screen) بالشعار لمدة نصف ثانية */
+        /* شاشة البداية بالشعار لمدة نصف ثانية */
         #splash-screen {
             position: fixed;
             top: 0;
@@ -57,7 +57,7 @@
             display: block;
         }
 
-        /* حاوية زر الواتساب بعرض الشاشة بالكامل لإزالة الفراغات السوداء */
+        /* حاوية زر الواتساب بعرض الشاشة بالكامل وبدون أي فراغات */
         .button-box {
             width: 100%;
             padding: 0;
@@ -99,7 +99,7 @@
 </head>
 <body>
 
-    <!-- شاشة البداية بالشعار (تظهر لثانية ثم تختفي بسلاسة) -->
+    <!-- شاشة البداية بالشعار (تظهر لنصف ثانية ثم تختفي بسلاسة) -->
     <div id="splash-screen">
         <img src="logo.png" alt="Master Voyages Logo">
     </div>
@@ -111,11 +111,11 @@
             <img src="master-omra.jpg" alt="Master Voyages - عمرة رمضان المبارك">
         </div>
 
-        <!-- 2. زر الواتساب العريض بدون أي فراغات سوداء جانبية -->
+        <!-- 2. زر الواتساب المحسّن بعبارة أنيقة واحترافية -->
         <div class="button-box">
-            <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A7%D8%AA%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86" 
+            <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86%20%D8%B9%D8%A8%D8%B1%20Master%20Voyages" 
                class="whatsapp-btn" target="_blank">
-                احجز مقعدك الآن عبر واتساب
+                احجز رحلتك الإيمانية الآن 🌙
             </a>
         </div>
 
@@ -127,7 +127,7 @@
     </div>
 
     <script>
-        // إخفاء شاشة البداية بعد نصف ثانية (500 ميلي ثانية)
+        // إخفاء شاشة البداية بعد نصف ثانية
         window.addEventListener('load', () => {
             setTimeout(() => {
                 const splash = document.getElementById('splash-screen');
