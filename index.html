@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Master Voyages - حجز عمرة رمضان</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* الهيدر وشعار الوكالة */
+        .header {
+            background: linear-gradient(135deg, #0b4f6c, #01baef);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .header h1 { font-size: 22px; font-weight: bold; margin-bottom: 6px; }
+        .header p { font-size: 13px; opacity: 0.9; }
+
+        /* بطاقة العرض الرئيسي */
+        .content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .offer-card {
+            background: #fff;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .offer-card h2 { color: #0b4f6c; font-size: 18px; margin-bottom: 8px; }
+        .offer-card .badge {
+            display: inline-block;
+            background: #e6fffa;
+            color: #234e52;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        /* قائمة مميزات الباقة */
+        .features-list {
+            list-style: none;
+            text-align: right;
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .features-list li {
+            font-size: 14px;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .features-list li::before {
+            content: "✓";
+            color: #38a169;
+            font-weight: bold;
+        }
+
+        /* زر الواتساب الضخم والبارز */
+        .whatsapp-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        .whatsapp-btn:active { background-color: #1ebe5d; }
+
+        /* معلومات التواصل والثقة */
+        .trust-section {
+            background: #f7fafc;
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 13px;
+            color: #718096;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 11px;
+            color: #a0aec0;
+            border-top: 1px solid #edf2f7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- الهيدر -->
+        <div class="header">
+            <h1>Master Voyages</h1>
+            <p>وجهتكم الأولى للسفر – شريكم الموثوق في جميع رحلاتكم</p>
+        </div>
+
+        <!-- محتوى الصفحة -->
+        <div class="content">
+            <div class="offer-card">
+                <span class="badge">حجوزات مؤكدة</span>
+                <h2>رحلات عمرة رمضان المبارك</h2>
+                <p style="font-size: 13px; color: #64748b; margin-bottom: 15px;">احجز الآن وسدد لاحقاً بكل سهولة ويسر</p>
+                
+                <ul class="features-list">
+                    <li>تذاكر السفر ذهاب وعودة</li>
+                    <li>إصدار التأشيرة والخدمات الأرضية</li>
+                    <li>سكن فاخر وقريب من الحرم المكي والمدني</li>
+                    <li>النقل والمواصلات بباصات حديثة ومكيفة</li>
+                </ul>
+            </div>
+
+            <!-- زر التواصل عبر الواتساب المباشر لرقم صاحب الوكالة -->
+            <a href="https://wa.me/22232050583?text=%Dالسلام%20عليكم%2C%20أريد%20الاستفسار%20عن%20تفاصيل%20وحجز%20رحلات%20عمرة%20رمضان" 
+               class="whatsapp-btn" target="_blank">
+                <span>تواصل واحجز عبر واتساب</span>
+            </a>
+
+            <!-- معلومات الثقة والموقع -->
+            <div class="trust-section">
+                <strong>مقر الوكالة:</strong> نواكشوط، تفرغ زينة (مقابل الملعب الأولمبي)<br>
+                <span>خدمة العملاء متوفرة طيلة أيام الأسبوع</span>
+            </div>
+        </div>
+
+        <!-- التذييل -->
+        <div class="footer">
+            &copy; 2026 Master Voyages. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
