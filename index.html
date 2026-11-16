@@ -25,6 +25,7 @@
             min-height: 100vh;
         }
 
+        /* حاوية الصورة الرئيسية */
         .banner-box {
             width: 100%;
             background-color: #000;
@@ -36,13 +37,13 @@
             display: block;
         }
 
-        .content-footer {
+        /* حاوية زر الواتساب */
+        .button-box {
             width: 100%;
-            padding: 16px 20px 24px 20px;
+            padding: 12px 16px;
             background-color: #05070b;
             display: flex;
-            flex-direction: column;
-            gap: 14px;
+            justify-content: center;
         }
 
         .whatsapp-btn {
@@ -66,64 +67,16 @@
             background-color: #0096b4;
         }
 
-        .info-card {
-            background: #111827;
-            border: 1px solid #1f2937;
-            border-radius: 12px;
-            padding: 16px;
-            color: #e5e7eb;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        /* حاوية صورة تفاصيل التواصل والسفلية */
+        .footer-image-box {
+            width: 100%;
+            background-color: #000;
         }
 
-        .info-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .info-row span.icon {
-            font-size: 16px;
-        }
-
-        .phones-list {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            font-weight: bold;
-            color: #38bdf8;
-            direction: ltr;
-            text-align: right;
-        }
-
-        .store-badges {
-            display: flex;
-            gap: 10px;
-            margin-top: 4px;
-        }
-
-        .store-btn {
-            flex: 1;
-            background: #000000;
-            border: 1px solid #374151;
-            border-radius: 8px;
-            padding: 10px;
-            color: #ffffff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-size: 12px;
-            font-weight: bold;
-            transition: background 0.2s;
-        }
-
-        .store-btn:hover {
-            background: #1f2937;
+        .footer-image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -131,47 +84,22 @@
 
     <div class="app-container">
         
-        <!-- الصورة الرئيسية -->
+        <!-- 1. الصورة الرئيسية للإعلان -->
         <div class="banner-box">
             <img src="master-omra.jpg" alt="Master Voyages - عمرة رمضان المبارك">
         </div>
 
-        <div class="content-footer">
-            <!-- زر الواتساب الأخضر السماوي -->
-            <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86" 
+        <!-- 2. زر الواتساب الأخضر السماوي تحت الصورة مباشرة -->
+        <div class="button-box">
+            <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A7%D8%AA%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86" 
                class="whatsapp-btn" target="_blank">
                 احجز مقعدك الآن عبر واتساب
             </a>
+        </div>
 
-            <!-- تفاصيل المقر وأرقام الهواتف والمتاجر تماماً تحت الزر -->
-            <div class="info-card">
-                <div class="info-row">
-                    <span class="icon">📍</span>
-                    <div>
-                        <strong>مقر الوكالة:</strong> تفرغ زينه (مقابل الملعب الأولمبي)[span_3](start_span)[span_3](end_span)
-                    </div>
-                </div>
-
-                <div class="info-row">
-                    <span class="icon">📞</span>
-                    <div>
-                        <strong>أرقام التواصل:</strong>[span_4](start_span)[span_4](end_span)
-                        <div class="phones-list">
-                            <span>24050582</span>[span_5](start_span)[span_5](end_span)
-                            <span>30360505</span>[span_6](start_span)[span_6](end_span)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="store-badges">
-                    <a href="#" class="store-btn">
-                        <span>🍏 App Store</span>[span_7](start_span)[span_7](end_span)
-                    </a>
-                    <a href="#" class="store-btn">
-                        <span>▶ Google Play</span>[span_8](start_span)[span_8](end_span)
-                    </a>
-                </div>
-            </div>
+        <!-- 3. صورة تفاصيل التواصل والموقع ومتاجر التطبيقات تحت الزر مباشرة -->
+        <div class="footer-image-box">
+            <img src="omra-footer.jpg" alt="Master Voyages - معلومات التواصل والموقع">
         </div>
 
     </div>
