@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Master Voyages - عمرة مباركة</title>
+    <title>Master Voyages - عمرة رمضان المبارك</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
         
         body {
-            background-color: #0b0f19;
+            background-color: #000000;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,99 +20,30 @@
             width: 100%;
             max-width: 480px;
             min-height: 100vh;
-            background-color: #f8fafc;
+            background-color: #0b0f19;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 0 25px rgba(0,0,0,0.5);
-            overflow-y: auto;
+            justify-content: space-between;
         }
 
-        /* صورة البانر في الأعلى بمقاس ممتاز */
-        .hero-banner {
+        /* حاوية الصورة الإعلانية الشاملة */
+        .banner-container {
             width: 100%;
+            flex: 1;
             background-color: #000;
         }
-        .hero-banner img {
+        .banner-container img {
             width: 100%;
             height: auto;
-            max-height: 380px;
-            object-fit: cover;
             display: block;
         }
 
-        /* صندوق النصوص التحفيزية والتفاصيل */
-        .content-section {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            flex: 1;
-        }
-
-        .exciting-card {
-            background: #ffffff;
-            border: 2px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-        }
-
-        .exciting-card h2 {
-            color: #0b4f6c;
-            font-size: 19px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        .exciting-card p {
-            color: #64748b;
-            font-size: 13px;
-            text-align: center;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        /* مميزات الرحلة بلغة حماسية */
-        .features-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 15px;
-        }
-
-        .features-list li {
-            font-size: 14px;
-            color: #334155;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            line-height: 1.4;
-        }
-
-        .features-list li::before {
-            content: "✨";
-            font-size: 14px;
-        }
-
-        /* تنبيه المقاعد المحدودة للحماس */
-        .urgency-box {
-            background: #fffbeb;
-            border: 1px dashed #f59e0b;
-            color: #b45309;
-            padding: 10px 14px;
-            border-radius: 8px;
-            font-size: 13px;
-            text-align: center;
-            font-weight: bold;
-            margin-top: 5px;
-        }
-
-        /* زر الواتساب البارز والمرتفع للأعلى */
+        /* حاوية زر الواتساب الثابت في الأسفل */
         .action-container {
-            padding: 10px 20px 30px 20px;
-            background: #f8fafc;
+            padding: 12px 16px 20px 16px;
+            background-color: #0b0f19;
+            width: 100%;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.5);
         }
 
         .whatsapp-btn {
@@ -126,9 +57,9 @@
             width: 100%;
             padding: 16px;
             border-radius: 12px;
-            font-size: 17px;
+            font-size: 18px;
             font-weight: bold;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
             transition: all 0.2s ease;
             text-align: center;
         }
@@ -137,55 +68,22 @@
             background-color: #1ebe5d;
             transform: scale(0.98);
         }
-
-        /* مقر الوكالة للثقة */
-        .footer-info {
-            text-align: center;
-            font-size: 12px;
-            color: #94a3b8;
-            margin-top: 10px;
-            line-height: 1.5;
-        }
     </style>
 </head>
 <body>
 
     <div class="app-container">
         
-        <!-- البانر الفخم في الأعلى -->
-        <div class="hero-banner">
-            <img src="banner.jpg" alt="Master Voyages - عمرة مباركة">
+        <!-- الصورة الاحترافية الشاملة بالاسم الجديد omra.jpg -->
+        <div class="banner-container">
+            <img src="omra.jpg" alt="Master Voyages - عمرة رمضان المبارك">
         </div>
 
-        <!-- النصوص التحفيزية وتفاصيل الباقة -->
-        <div class="content-section">
-            <div class="exciting-card">
-                <h2>عمرة رمضان المبارك 🌙</h2>
-                <p>عش إيمانيات الشهر الفضيل بجوار بيت الله الحرام مع خدمات راقية ومطمئنة.</p>
-                
-                <ul class="features-list">
-                    <li><strong>تذاكر سفر مؤكدة:</strong> ذهاب وعودة عبر الخطوط التركية الفاخرة.</li>
-                    <li><strong>سكن فاخر وقريب:</strong> فنادق مميزة قريبة جداً من الحرمين الشريفين للراحة التامة.</li>
-                    <li><strong>تأشيرة وخدمات أرضية:</strong> إنجاز سريع لكافة الإجراءات الرسمية بدون عناء.</li>
-                    <li><strong>نقل مريح:</strong> باصات حديثة ومكيفة لتنقلاتك بكل طمأنينة.</li>
-                </ul>
-
-                <div class="urgency-box">
-                    ⚠️ مقاعد الرحلة محدودة جداً! بادر بالحجز الآن.
-                </div>
-            </div>
-
-            <div class="footer-info">
-                📍 نواكشوط، تفرغ زينة (مقابل الملعب الأولمبي)[span_0](start_span)[span_0](end_span)<br>
-                شركة Master Voyages - شريكك الموثوق في السفر[span_1](start_span)[span_1](end_span)
-            </div>
-        </div>
-
-        <!-- زر الواتساب البارز في الأسفل وغير المخفي -->
+        <!-- زر الواتساب البارز والواضح في الأسفل للحجز الفوري -->
         <div class="action-container">
-            <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A7%D8%AA%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86" 
+            <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D9%83%D8%AA%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A7%D8%AA%20%D8%B9%D9%85%D8%B1%D8%Aة" 
                class="whatsapp-btn" target="_blank">
-                <span>تواصل واحجز مقعدك عبر واتساب</span>
+                <span>احجز مقعدك الآن عبر واتساب</span>
             </a>
         </div>
 
