@@ -6,8 +6,28 @@
     <title>Master Voyages - حجز عمرة رمضان</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #f4f7f6; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        body { background-color: #f4f7f6; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow-x: hidden; }
         
+        /* شاشة البداية (Splash Screen) */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        #splash-screen img {
+            width: 75%;
+            max-width: 260px;
+            object-fit: contain;
+        }
+
         .container {
             width: 100%;
             max-width: 480px;
@@ -122,6 +142,12 @@
 </head>
 <body>
 
+    <!-- شاشة البداية (تظهر لمدة ثانية واحدة ثم تختفي) -->
+    <div id="splash-screen">
+        <!-- ملاحظة: إذا كانت صيغة صورتك jpg غيرها هنا إلى logo.jpg -->
+        <img src="logo.png" alt="Master Voyages Logo">
+    </div>
+
     <div class="container">
         <!-- الهيدر -->
         <div class="header">
@@ -145,7 +171,7 @@
             </div>
 
             <!-- زر التواصل عبر الواتساب المباشر لرقم صاحب الوكالة -->
-            <a href="https://wa.me/22232050583?text=%Dالسلام%20عليكم%2C%20أريد%20الاستفسار%20عن%20تفاصيل%20وحجز%20رحلات%20عمرة%20رمضان" 
+            <a href="https://wa.me/22232050583?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A7%D8%AA%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86" 
                class="whatsapp-btn" target="_blank">
                 <span>تواصل واحجز عبر واتساب</span>
             </a>
@@ -162,6 +188,19 @@
             &copy; 2026 Master Voyages. All Rights Reserved.
         </div>
     </div>
+
+    <script>
+        // إخفاء شاشة البداية بعد ثانية واحدة (1000 ملي ثانية) بسلاسة
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const splash = document.getElementById('splash-screen');
+                splash.style.opacity = '0';
+                setTimeout(function() {
+                    splash.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+    </script>
 
 </body>
 </html>
