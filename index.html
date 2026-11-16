@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Master Voyages - عمرة رمضان المبارك</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
         
-        /* توحيد خلفية الصفحة لتتطابق مع الصورة السفلية وإلغاء أي بقع سوداء نهائياً */
+        /* قفل الشاشة تماماً لمنع أي حركة أو مط (Bounce/Rubber-band) في الجوال */
         html, body {
-            background-color: #eaf3fc;
+            background-color: #000000;
             margin: 0;
             padding: 0;
             width: 100%;
-            min-height: 100vh;
-            overscroll-behavior-y: none;
+            height: 100%;
+            overflow: hidden;
+            position: fixed;
         }
 
         /* شاشة البداية بالشعار */
@@ -41,10 +45,14 @@
         .app-container {
             width: 100%;
             max-width: 480px;
+            height: 100%;
             margin: 0 auto;
-            background-color: #eaf3fc;
+            background-color: #000000;
             display: flex;
             flex-direction: column;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: none;
         }
 
         /* حاوية الصور لمنع أي فراغات فاصلة تماماً */
@@ -52,7 +60,8 @@
             width: 100%;
             line-height: 0;
             font-size: 0;
-            background-color: #eaf3fc;
+            background-color: #000000;
+            flex-shrink: 0;
         }
 
         .image-box img {
@@ -85,7 +94,7 @@
 
         <!-- 2. زر الواتساب المصور -->
         <div class="image-box">
-            <a href="https://wa.me/22224050582?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86%20%D8%B9%D8%A8%D8%B1%20Master%20Voyages" target="_blank">
+            <a href="https://wa.me/22224050582?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B5%20%D9%88%D8%AD%D8%AC%D8%B2%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D9%85%D8%B1%D8%A9%20%D8%B1%D9%85%D8%B6%D8%A7%D9%86%20%D8%B9%D8%A8%D8%B1%20Master%20Voyages" target="_blank">
                 <img src="whatsapp-btn.jpg" alt="احجز مقعدك الآن عبر واتساب">
             </a>
         </div>
